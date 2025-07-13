@@ -1,0 +1,102 @@
+/* Wrapper Styling */
+.home-wrapper {
+    min-height: 100vh;
+    background-color: #f4f7fa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grid Layout */
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Column Styling */
+.kanban-column,
+.loggers-section {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Column Headings */
+.kanban-column h2,
+.loggers-section h2 {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Task Card */
+.task-card {
+    background: #f0f2f5;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Action Buttons */
+.task-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn,
+.add-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Specific Button Colors */
+.edit-btn {
+    background-color: #ffd93b;
+    color: #000;
+}
+
+.delete-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.add-btn {
+    background-color: #00c9a7;
+    color: #fff;
+    margin-top: auto;
+}
+
+/* Logger List */
+.loggers-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.loggers-section li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .kanban-board {
+        grid-template-columns: 1fr;
+    }
+}
